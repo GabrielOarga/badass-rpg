@@ -1,1 +1,1 @@
-# badass-rpg
+# BadassRpg

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/regstyle.css" />
+    <title>Register</title>
+</head>
+<body>
+<div>
+    <div class="topHome">
+        <div class="topLeft">
+        </div>
+        <div class="topMid">
+            <p>BADASS REGISTER</p>
+        </div>
+        <div class="topRight">
+            <ul>
+                <li><a href="login">Login</a></li>
+                <li><a href="index">Index</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="midHome">
+        <div class="formContainer">
+            <form action="#" th:action="@{/register}" th:object="${userdto}" method="post">
+                <input type="text" th:field="*{name}" placeholder="Enter Username"/>
+                <input type="text" th:field="*{email}" placeholder="Enter Email"/>
+                <input type="text" th:field="*{confirmEmail}" placeholder="Confirm Email"/>
+                <input type="password" th:field="*{password}" placeholder="Enter Password"/>
+                <input type="password" th:field="*{confirmPassword}" placeholder="Confirm Password"/>
+                <button type="submit">Register</button>
+                <ul class="errorContainer" th:if="${#fields.hasErrors()}">
+                    <li class="errorLabel" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error message had an error</li>
+                    <li class="errorLabel" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error message had an error</li>
+                    <li class="errorLabel" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Error message had an error</li>
+                    <li class="errorLabel" th:each="err : ${#fields.errors('global')}" th:text="${err}">Error message had an error</li>
+                </ul>
+            </form>
+        </div>
+        <div class="errorContainer">
+
+        </div>
+    </div>
+    <div class="botHome">
+    </div>
+</div>
+</body>
+</html>

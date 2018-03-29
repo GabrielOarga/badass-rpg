@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/indexstyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="js/indexscript.js" type="text/javascript"></script>
+    <title>Home</title>
+</head>
+<body>
+<!--/*@thymesVar id="authorized" type="boolean"*/-->
+<!--/*@thymesVar id="userName" type="String"*/-->
+<!--/*@thymesVar id="retrievedHeroList" type="java.util.ArrayList"*/-->
+<!--/*@thymesVar id="hero" type="ro.academyplus.model.data.characters.BaseHero"*/-->
+<div class="main-container">
+    <div class="header">
+        <div></div>
+        <div class="logo">
+            <p>BADASS RPG</p>
+        </div>
+        <div class="navBar">
+            <ul>
+                <li th:unless="${authorized}"><a href="login">Login</a></li>
+                <li th:unless="${authorized}"><a href="register">Register</a></li>
+                <li th:if="${authorized}"><a href="logout">Logout</a></li>
+                <li th:if="${authorized}"><a href="index">Profile</a></li>
+                <li th:if="${authorized}" th:text="'Welcome, ' + ${userName} + '!'" id="sessionUserNameLink"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="midHome">
+        <div class="midLeftSidebar">
+            <div class="buttonWrapper">
+                <button id="button1">Button</button>
+            </div>
+        </div>
+        <div class="midCenterWindow">
+            <div>
+                <p th:unless="${authorized}" style="font-size: 25px; color: #111; padding-top: 150px; padding-left: 250px" >You need to login to see this content! //placeholder</p>
+            </div>
+            <div class="midSplitVerticalLeft">
+                <div id="listHeroes" class="listContainer" th:if="${authorized}">
+                    <form action="#" th:action="@{/selection_action}" method="post">
+                    <div th:each="hero,iterStat : ${retrievedHeroList}">
+                        <div class="generatedHeroList" th:if="${hero.class.name == 'ro.academyplus.model.data.characters.type.AdolfCritler'}">
+                            <button class="selectHeroButton" th:id="${'selectAdolfCritler_' + (iterStat.count - 1)}" type="button" >
+                                <div class="portraitWrapper">
+                                    <label class="heroName" th:text="${hero.getName()}"></label>
+                                    <img class="portrait" src="/img/badass2_select.jpeg" alt=""/>
+                                </div>
+                                <div class="statPanel">
+                                    <ul class="leftPanel">
+                                        <li class="level">Level</li>
+                                        <li class="health">Health points</li>
+                                        <li class="attack">Attack damage</li>
+                                        <li class="armor">Armor value</li>
+                                        <li class="hit">Hit chance</li>
+                                        <li class="crit">Crit chance</li>
+                                    </ul>
+                                    <ul class="rightPanel">
+                                        <li class="roundedTop level" th:text="${hero.getLevel()}"></li>
+                                        <li class="health" th:text="${hero.getHitpoints()}"></li>
+                                        <li class="attack" th:text="${hero.getBaseDamage()}"></li>
+                                        <li class="armor" th:text="${hero.getBaseArmor()}"></li>
+                                        <li class="hit" th:text="${hero.getHitChance()}"></li>
+                                        <li class="roundedBottom crit" th:text="${hero.getCritChance()}"></li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="generatedHeroList" th:if="${hero.class.name == 'ro.academyplus.model.data.characters.type.ChuckTesta'}">
+                            <button class="selectHeroButton" th:id="${'selectChuckTesta_' + (iterStat.count - 1)}" type="button" >
+                                <div class="portraitWrapper">
+                                    <label class="heroName" th:text="${hero.getName()}"></label>
+                                    <img class="portrait" src="/img/badass1_select.jpeg" alt=""/>
+                                </div>
+                                <div class="statPanel">
+                                    <ul class="leftPanel">
+                                        <li class="level">Level</li>
+                                        <li class="health">Health points</li>
+                                        <li class="attack">Attack damage</li>
+                                        <li class="armor">Armor value</li>
+                                        <li class="hit">Hit chance</li>
+                                        <li class="crit">Crit chance</li>
+                                    </ul>
+                                    <ul class="rightPanel">
+                                        <li class="roundedTop level" th:text="${hero.getLevel()}"></li>
+                                        <li class="health" th:text="${hero.getHitpoints()}"></li>
+                                        <li class="attack" th:text="${hero.getBaseDamage()}"></li>
+                                        <li class="armor" th:text="${hero.getBaseArmor()}"></li>
+                                        <li class="hit" th:text="${hero.getHitChance()}"></li>
+                                        <li class="roundedBottom crit" th:text="${hero.getCritChance()}"></li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="generatedHeroList" th:if="${hero.class.name == 'ro.academyplus.model.data.characters.type.NightelfMohawk'}">
+                            <button class="selectHeroButton" th:id="${'selectNightelfMohawk_' + (iterStat.count - 1)}" type="button" >
+                                <div class="portraitWrapper">
+                                    <label class="heroName" th:text="${hero.getName()}"></label>
+                                    <img class="portrait" src="/img/badass3_select.jpeg" alt=""/>
+                                </div>
+                                <div class="statPanel">
+                                    <ul class="leftPanel">
+                                        <li class="level">Level</li>
+                                        <li class="health">Health points</li>
+                                        <li class="attack">Attack damage</li>
+                                        <li class="armor">Armor value</li>
+                                        <li class="hit">Hit chance</li>
+                                        <li class="crit">Crit chance</li>
+                                    </ul>
+                                    <ul class="rightPanel">
+                                        <li class="roundedTop level" th:text="${hero.getLevel()}"></li>
+                                        <li class="health" th:text="${hero.getHitpoints()}"></li>
+                                        <li class="attack" th:text="${hero.getBaseDamage()}"></li>
+                                        <li class="armor" th:text="${hero.getBaseArmor()}"></li>
+                                        <li class="hit" th:text="${hero.getHitChance()}"></li>
+                                        <li class="roundedBottom crit" th:text="${hero.getCritChance()}"></li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                        <input type="hidden" id="selectionName" name="selectedHeroName"/>
+                        <input type="hidden" id="selectionAction" name="selectedAction"/>
+                        <div style="padding-top: 20px">
+                            <button style="background-color: red" id="deleteHero" type="submit">DELETE</button>
+                            <button style="background-color: green" id="selectHero" type="submit">PLAY</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="midSplitVerticalRight">
+                <div id="createHero" class="listContainer" th:if="${authorized}">
+                    <form class="heroListContainerForm" action="#" th:action="@{/index}" method="post">
+                        <input id="createHeroNameInput" type="text" th:value="${baseHeroDTO.heroName}" name="heroName" placeholder="Name your Character"/>
+                        <div>
+                            <button class="createHeroButton" id="createNightelfMohawk" type="button" >
+                                <div class="portraitWrapper">
+                                    <img class="portrait" src="/img/badass3.jpeg" alt=""/>
+                                </div>
+                                <div class="statPanel">
+                                    <ul class="leftPanel">
+                                        <li class="level">Level</li>
+                                        <li class="health">Health points</li>
+                                        <li class="attack">Attack damage</li>
+                                        <li class="armor">Armor value</li>
+                                        <li class="hit">Hit chance</li>
+                                        <li class="crit">Crit chance</li>
+                                    </ul>
+                                    <ul class="rightPanel">
+                                        <li class="roundedTop level" >1</li>
+                                        <li class="health">100</li>
+                                        <li class="attack">10</li>
+                                        <li class="armor">10</li>
+                                        <li class="hit">60%</li>
+                                        <li class="roundedBottom crit">5%</li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button class="createHeroButton" id="createChuckTesta" type="button" >
+                                <div class="portraitWrapper">
+                                    <img class="portrait" src="/img/badass1.jpeg" alt=""/>
+                                </div>
+                                <div class="statPanel">
+                                    <ul class="leftPanel">
+                                        <li class="level">Level</li>
+                                        <li class="health">Health points</li>
+                                        <li class="attack">Attack damage</li>
+                                        <li class="armor">Armor value</li>
+                                        <li class="hit">Hit chance</li>
+                                        <li class="crit">Crit chance</li>
+                                    </ul>
+                                    <ul class="rightPanel">
+                                        <li class="roundedTop level" >1</li>
+                                        <li class="health">100</li>
+                                        <li class="attack">10</li>
+                                        <li class="armor">10</li>
+                                        <li class="hit">60%</li>
+                                        <li class="roundedBottom crit">5%</li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button class="createHeroButton" id="createAdolfCritler" type="button" >
+                                <div class="portraitWrapper">
+                                    <img class="portrait" src="/img/badass2.jpeg" alt=""/>
+                                </div>
+                                <div class="statPanel">
+                                    <ul class="leftPanel">
+                                        <li class="level">Level</li>
+                                        <li class="health">Health points</li>
+                                        <li class="attack">Attack damage</li>
+                                        <li class="armor">Armor value</li>
+                                        <li class="hit">Hit chance</li>
+                                        <li class="crit">Crit chance</li>
+                                    </ul>
+                                    <ul class="rightPanel">
+                                        <li class="roundedTop level" >1</li>
+                                        <li class="health">100</li>
+                                        <li class="attack">10</li>
+                                        <li class="armor">10</li>
+                                        <li class="hit">60%</li>
+                                        <li class="roundedBottom crit">5%</li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                        <input id="heroTypeInput" type="hidden" name="heroType"/>
+                        <button id="createHeroSubmit" type="submit">Badass!</button>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="botHome"></div>
+    <div class="hideVisibleDropDown"></div>
+    <div class="midLeftSidebarNavigation">
+        <a href="login">Login</a>
+        <a href="register">Register</a>
+        <a href="index">Index</a>
+    </div>
+</div>
+</body>
+</html>

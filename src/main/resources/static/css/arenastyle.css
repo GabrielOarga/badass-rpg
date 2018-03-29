@@ -1,0 +1,512 @@
+/* ----------------------- */
+/* Css for general objects */
+/* ----------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a:hover{
+    background-color: blueviolet;
+}
+
+li a {
+    display: inline-block;
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+p {
+    color: white;
+    cursor: default;
+}
+
+button {
+    background-color: inherit;
+    color: white;
+    width: 100px;
+    max-height: 50px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    outline:none;
+    background-color: #333333;
+}
+
+button:focus {
+    outline: none;
+    background-color: #333333;
+}
+
+a {
+    display: block;
+    background-color: inherit;
+    color: #fff;
+    width: inherit;
+    max-height: 50px;
+    text-align: center;
+    padding: 16px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: blueviolet;
+}
+
+a:focus {
+    background-color: blueviolet;
+}
+
+img {
+    display: block;
+}
+
+input[type=text], select {
+    display: block;
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* ------------------------------ */
+/* Css for the top navigation bar */
+/* ------------------------------ */
+
+.header {
+    position: fixed;
+    overflow: hidden;
+    background-image: url('/img/Ui_Background.jpg');
+    z-index: 5;
+    height: 50px;
+    width: 100%;
+    top: 0; left: 0;
+    box-shadow: 0px 9px 25px 5px #111;
+}
+
+.header > div {
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header .logo {
+    background-color: transparent;
+    text-align: center;
+}
+
+.header .navbar {
+    text-align: right;
+    top: 0;
+    right: 0;
+}
+
+#sessionUserNameLink {
+    display: inline-block;
+    background-color: inherit;
+    color: white;
+    height: inherit;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: default;
+}
+
+/* ----------------- */
+/* Css for the arena */
+/* ----------------- */
+
+.midHome {
+    background: url('/img/arena.jpeg');
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.midCenterWindow {
+    background-color: transparent;
+    padding-top: 25px;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.midCenterWindow .arenaContainer {
+    text-align: center;
+}
+
+.arenaContainer table {
+    display: inline-block;
+    height: 844px;
+    width: 844px;
+}
+
+.arenaContainer table tr {
+    display: block;
+}
+
+.arenaContainer table tr td {
+    display: inline-block;
+    background-color: black;
+    opacity: 0.6;                /*TODO Change if nto visible on prjector*/
+    width: 40px;
+    height: 40px;
+    float: left;
+    border-left: 2px solid slategrey;
+    border-bottom: 2px solid slategrey;
+}
+
+.arenaContainer table tr td.borderExceptionTop {
+    border-top: 2px solid slategrey;
+}
+
+.arenaContainer table tr td.borderExceptionRight {
+    border-right: 2px solid slategrey;
+}
+
+/* -------------- */
+/* Css for the UI */
+/* -------------- */
+
+.midCenterWindow .uiContainer {
+    display: flex;
+    background-image: url('/img/Ui_Background.jpg');
+    width: 100%;
+    height: 11.4em;
+}
+
+.uiContainer .uiElement {
+    display: inline-block;
+    height: 11.4em;
+}
+
+#actionBar {
+    max-width: 514px;
+}
+
+#actionBar form {
+
+}
+
+#actionBar ul {
+    display: block;
+    text-align: center;
+    height: 5.7em;
+    background-color: transparent;
+    padding: 16px 30px 0;
+}
+
+#actionBar ul li {
+    display: inline-block;
+    float: left;
+    color: wheat;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: 0px 0px 3px 2px #111;
+    border-radius: 5px;
+    cursor: default;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 3px solid transparent;
+}
+
+#actionBar ul li:hover {
+    border: 3px solid darkslategrey;
+}
+
+
+#actionBar #logo {
+    display: block;
+    height: 5.7em;
+}
+
+#heroStatus {
+    display: inline-block;
+}
+
+#plebStatus {
+    display: inline-block;
+    max-width: 466px;
+}
+
+#inventoryList {
+    display: inline-block;]
+    max-width: 514px;
+
+}
+
+.midHome {
+    background-color: darkgray;
+    min-height: 100vh;
+}
+
+.midLeftSidebar {
+    background-color: #333;
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    /*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;*/
+}
+
+.midSplitVerticalLeft {
+    display: inline-block;
+    background-color: transparent;
+    width: 50%;
+    min-width: 600px;
+    padding: 50px;
+    height: auto;
+    float: left;
+}
+
+.midSplitVerticalRight {
+    display: inline-block;
+    background-color: transparent;
+    width: 50%;
+    min-width: 600px;
+    padding: 50px;
+    height: auto;
+    float: left;
+}
+
+.heroListContainerForm {
+    height: auto;
+    text-align: center;
+}
+
+.listContainer {
+    top: 50px;
+    display: block;
+    width: 650px;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 5px;
+    position: relative;
+    background-color: #333;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    border-radius: 5px;
+}
+
+#createHeroNameInput {
+    width: 400px;
+    margin: 10px auto;
+}
+
+.createHeroButton {
+    display: inline-block;
+    color: white;
+    height: auto;
+    max-height: inherit;
+    width: auto;
+    padding: 0;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 3px solid transparent;
+}
+
+.portraitWrapper {
+    display: block;
+    height: 160px;
+    width: 160px;
+    float: left;
+}
+
+.createHeroButton .portrait {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.statPanel {
+    display: block;
+    background-color: darkgray;
+    height: 160px;
+    width: 280px;
+    float: left;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.statPanel ul {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: start;
+    float: left;
+}
+
+.statPanel ul.rightPanel {
+    border: 2px dimgray;
+    border-left-style: solid;
+    text-align: center;
+}
+
+.statPanel ul.leftPanel {
+
+}
+
+.statPanel li {
+    height: 1.68em;
+    padding-top: 0.1em;
+    padding-left: 1.5em;
+    background-color: red;
+    font: normal 1em/1.5 Arial, Verdana, sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    float: none;
+    border: 1px dimgray;
+    border-bottom-style: solid;
+}
+
+.statPanel ul.rightPanel li {
+    padding: 0.1em 0 0;
+}
+
+.statPanel li.roundedTop {
+    border-top-right-radius: 15px;
+}
+
+.statPanel li.roundedBottom {
+    border-bottom-right-radius: 15px;
+}
+
+.statPanel li.level {
+    background-color: slategrey;
+}
+
+.statPanel li.health {
+    background-color: forestgreen;
+}
+
+.statPanel li.attack {
+    background-color: darkred;
+}
+
+.statPanel li.armor {
+    background-color: darkslategrey;
+}
+
+.statPanel li.hit {
+    background-color: yellow;
+}
+
+.statPanel li.crit {
+    background-color: yellow;
+}
+
+.createHeroButton:hover {
+    background-color: inherit;
+    border: 3px solid blueviolet;
+}
+
+.createHeroButton:focus {
+    border: 3px solid blueviolet;
+    background-color: inherit;
+}
+
+#createHeroSubmit {
+    background-color: blueviolet;
+    width: 400px;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+#createHeroSubmit:hover {
+    background-color: darkviolet;
+}
+
+.selectHeroButton {
+    display: inline-block;
+    color: white;
+    height: auto;
+    max-height: inherit;
+    width: auto;
+    padding: 0;
+    font-size: 16px;
+    margin: 10px 0 0 80px;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 3px solid transparent;
+}
+
+.selectHeroButton label {
+    display: block;
+    height: 1.68em;
+    padding-top: 0.1em;
+    background-color: deepskyblue;
+    font: normal 1em/1.5 Arial, Verdana, sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    float: none;
+    border-top-left-radius: 1em;
+    text-align: center;
+}
+
+.selectHeroButton .portrait {
+    border-bottom-left-radius: 1em;
+}
+
+.listContainer .generatedHeroList {
+    text-align: center;
+}
+
+.generatedHeroList .deleteHeroWrapper {
+    display: inline-block;
+    text-align: center;
+    margin: 0 100px;
+    width: 100px;
+    height: 25px;
+}
+
+.generatedHeroList .deleteHeroButton {
+    display: inline-block;
+    background-color: darkred;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 7px;
+}
+
+.generatedHeroList .deleteHeroButton:hover {
+    background-color: red;
+}

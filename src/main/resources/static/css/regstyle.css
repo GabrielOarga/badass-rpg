@@ -1,0 +1,179 @@
+/* ----------------------- */
+/* Css for general objects */
+/* ----------------------- */
+
+div {
+    width:auto;
+}
+
+ul {
+    list-style-type: none;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+    height: inherit;
+}
+
+li a:hover{
+    background-color: #111;
+}
+
+li a {
+    display: inline-block;
+    background-color: inherit;
+    color: white;
+    height: inherit;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+p {
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+form {
+    background-color: transparent;
+}
+
+input[type=text], select {
+    display: block;
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    display: block;
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    display: block;
+    font-size: 15px;
+    width: 50%;
+    transform: translate(50%, 0);
+    background-color: blueviolet;
+    color: white;
+    padding: 20px 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: darkviolet;
+}
+
+/* ------------------------------ */
+/* Css for the top navigation bar */
+/* ------------------------------ */
+
+.topHome {
+    position: fixed;
+    text-align: center;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 5;
+    height: 50px;
+    width: 100%;
+    top: 0; left: 0;
+}
+
+.topLeft {
+    background-color: #333;
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: 0;
+}
+
+.topMid {
+    display: inline-block;
+    background-color: transparent;
+    height: 100%;
+    width: 200px;
+    text-align: center;
+}
+
+.topRight {
+    position: absolute;
+    display: inline-block;
+    background-color: #333;
+    height: 100%;
+    width: auto;
+    top: 0;
+    right: 0;
+}
+
+/* ------------------------------ */
+/* Css for the middle of the page */
+/* ------------------------------ */
+
+.midHome {
+    position: absolute;
+    background-color: darkgray;
+    height: 1400px;
+    width: 100%;
+    top: 50px; left: 0;
+}
+
+.formContainer {
+    position: absolute;
+    background-color: #333;
+    z-index: 4;
+    height: 395px;
+    width: 500px;
+    margin-left: 50%;
+    margin-top: 100px;
+    transform: translate( -50%, 0);
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    padding: 24px 28px;
+}
+
+.errorContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.errorLabel {
+    float: inherit;
+    display: block;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ---------------------- */
+/* Css for the bottom bar */
+/* ---------------------- */
+
+.botHome {
+    position: absolute;
+    text-align: center;
+    background-color: #333;
+    height: 50px;
+    width: 100%;
+    top: 1450px; left: 0;
+}

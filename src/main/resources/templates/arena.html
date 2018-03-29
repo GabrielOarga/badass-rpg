@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/arenastyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="js/arenascript.js" type="text/javascript"></script>
+
+    <!--var pleb = /*[[${pleb}]]*/ 'caca';-->
+    <!--if (pleb != null) {-->
+    <!--var plebName = /*[[${pleb.type}]]*/ 'caca';-->
+    <!--}-->
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+
+        var playerX = /*[[${map.playerX}]]*/ '9001';
+        var playerY = /*[[${map.playerY}]]*/ '9001';
+        var contentString = /*[[${map.assemblePlebDisplay()}]]*/ 'caca';
+
+
+        /*]]>*/
+    </script>
+    <title>BadassArena</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="header">
+        <div></div>
+        <div class="logo">
+            <p>BADASS RPG</p>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="logout">Logout</a></li>
+                <li><a href="index">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="midHome">
+        <!--<div class="midLeftSidebar">-->
+
+        <!--</div>-->
+        <div class="midCenterWindow">
+            <div class="arenaContainer">
+                <table class="arena">
+                    <tr id="tr1">
+                        <td class="borderExceptionTop td1"></td><td class="borderExceptionTop td2"></td><td class="borderExceptionTop td3"></td><td class="borderExceptionTop td4"></td>
+                        <td class="borderExceptionTop td5"></td><td class="borderExceptionTop td6"></td><td class="borderExceptionTop td7"></td><td class="borderExceptionTop td8"></td>
+                        <td class="borderExceptionTop td9"></td><td class="borderExceptionTop td10"></td><td class="borderExceptionTop td11"></td><td class="borderExceptionTop td12"></td>
+                        <td class="borderExceptionTop td13"></td><td class="borderExceptionTop td14"></td><td class="borderExceptionTop td15"></td><td class="borderExceptionTop td16"></td>
+                        <td class="borderExceptionTop td17"></td><td class="borderExceptionTop td18"></td><td class="borderExceptionTop td19"></td><td class="borderExceptionTop td20"></td>
+                        <td class="borderExceptionTop borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr2">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr3">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr4">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr5">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr6">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr7">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr8">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr9">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr10">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr11">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr12">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr13">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr14">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr15">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr16">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr17">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr18">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr19">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr20">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                    <tr id="tr21">
+                        <td class="td1"></td>
+                        <td class="td2"></td>
+                        <td class="td3"></td>
+                        <td class="td4"></td>
+                        <td class="td5"></td>
+                        <td class="td6"></td>
+                        <td class="td7"></td>
+                        <td class="td8"></td>
+                        <td class="td9"></td>
+                        <td class="td10"></td>
+                        <td class="td11"></td>
+                        <td class="td12"></td>
+                        <td class="td13"></td>
+                        <td class="td14"></td>
+                        <td class="td15"></td>
+                        <td class="td16"></td>
+                        <td class="td17"></td>
+                        <td class="td18"></td>
+                        <td class="td19"></td>
+                        <td class="td20"></td>
+                        <td class="borderExceptionRight td21"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="uiContainer">
+                <div class="uiElement" id="actionBar">
+                    <form action="#" th:action="@{/arena}" method="post">
+                        <ul>
+                            <li id="moveUp">UP</li>
+                            <li id="moveDown">DOWN</li>
+                            <li id="moveRight">RIGHT</li>
+                            <li id="moveLeft">LEFT</li>
+                            <li id="fight">Fight</li>
+                            <li id="flight">Flight</li>
+                        </ul>
+                        <input id="actionValue" type="hidden" name="actionValue" />
+                        <input id="actionType" type="hidden" name="actionType"/>
+                        <button id="submitAction" type="submit"></button>
+                        <div id="logo">
+                            <!--<img src="/img/arenalogo.jpg" alt=""/>-->
+                        </div>
+                    </form>
+                </div>
+                <div class="uiElement" id="heroStatus">
+                    <div class="generatedHeroList"  th:if="${hero.class.name == 'ro.academyplus.model.data.characters.type.AdolfCritler'}">
+                        <div class="selectHeroButton">
+                            <div class="portraitWrapper">
+                                <label class="heroName" th:text="${hero.getName()}"></label>
+                                <img class="portrait" src="/img/badass2_select.jpeg" alt=""/>
+                            </div>
+                            <div class="statPanel">
+                                <ul class="leftPanel">
+                                    <li class="level">Level</li>
+                                    <li class="health">Health points</li>
+                                    <li class="attack">Attack damage</li>
+                                    <li class="armor">Armor value</li>
+                                    <li class="hit">Hit chance</li>
+                                    <li class="crit">Crit chance</li>
+                                </ul>
+                                <ul class="rightPanel">
+                                    <li class="roundedTop level" th:text="${hero.getLevel()}"></li>
+                                    <li class="health" th:text="${hero.getHitpoints()}"></li>
+                                    <li class="attack" th:text="${hero.getBaseDamage()}"></li>
+                                    <li class="armor" th:text="${hero.getBaseArmor()}"></li>
+                                    <li class="hit" th:text="${hero.getHitChance()}"></li>
+                                    <li class="roundedBottom crit" th:text="${hero.getCritChance()}"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="generatedHeroList" th:if="${hero.class.name == 'ro.academyplus.model.data.characters.type.ChuckTesta'}">
+                        <div class="selectHeroButton">
+                            <div class="portraitWrapper">
+                                <label class="heroName" th:text="${hero.getName()}"></label>
+                                <img class="portrait" src="/img/badass1_select.jpeg" alt=""/>
+                            </div>
+                            <div class="statPanel">
+                                <ul class="leftPanel">
+                                    <li class="level">Level</li>
+                                    <li class="health">Health points</li>
+                                    <li class="attack">Attack damage</li>
+                                    <li class="armor">Armor value</li>
+                                    <li class="hit">Hit chance</li>
+                                    <li class="crit">Crit chance</li>
+                                </ul>
+                                <ul class="rightPanel">
+                                    <li class="roundedTop level" th:text="${hero.getLevel()}"></li>
+                                    <li class="health" th:text="${hero.getHitpoints()}"></li>
+                                    <li class="attack" th:text="${hero.getBaseDamage()}"></li>
+                                    <li class="armor" th:text="${hero.getBaseArmor()}"></li>
+                                    <li class="hit" th:text="${hero.getHitChance()}"></li>
+                                    <li class="roundedBottom crit" th:text="${hero.getCritChance()}"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="generatedHeroList" th:if="${hero.class.name == 'ro.academyplus.model.data.characters.type.NightelfMohawk'}">
+                        <div class="selectHeroButton" type="button" >
+                            <div class="portraitWrapper">
+                                <label class="heroName" th:text="${hero.getName()}"></label>
+                                <img class="portrait" src="/img/badass3_select.jpeg" alt=""/>
+                            </div>
+                            <div class="statPanel">
+                                <ul class="leftPanel">
+                                    <li class="level">Level</li>
+                                    <li class="health">Health points</li>
+                                    <li class="attack">Attack damage</li>
+                                    <li class="armor">Armor value</li>
+                                    <li class="hit">Hit chance</li>
+                                    <li class="crit">Crit chance</li>
+                                </ul>
+                                <ul class="rightPanel">
+                                    <li class="roundedTop level" th:text="${hero.getLevel()}"></li>
+                                    <li class="health" th:text="${hero.getHitpoints()}"></li>
+                                    <li class="attack" th:text="${hero.getBaseDamage()}"></li>
+                                    <li class="armor" th:text="${hero.getBaseArmor()}"></li>
+                                    <li class="hit" th:text="${hero.getHitChance()}"></li>
+                                    <li class="roundedBottom crit" th:text="${hero.getCritChance()}"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uiElement" id="plebStatus"></div>
+                <div class="uiElement" id="inventoryList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

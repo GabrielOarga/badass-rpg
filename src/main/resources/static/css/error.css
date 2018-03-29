@@ -1,0 +1,130 @@
+/* ----------------------- */
+/* Css for general objects */
+/* ----------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a:hover{
+    background-color: blueviolet;
+}
+
+li a {
+    display: inline-block;
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+p {
+    color: white;
+    cursor: default;
+}
+
+button {
+    background-color: inherit;
+    color: white;
+    width: 100px;
+    max-height: 50px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    outline:none;
+    background-color: blueviolet;
+}
+
+button:focus {
+    outline: none;
+    background-color: blueviolet;
+}
+
+a {
+    display: block;
+    background-color: inherit;
+    color: #fff;
+    width: inherit;
+    max-height: 50px;
+    text-align: center;
+    padding: 16px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: blueviolet;
+}
+
+a:focus {
+    background-color: blueviolet;
+}
+
+img {
+    display: block;
+}
+
+input[type=text], select {
+    display: block;
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ------------------------------ */
+/* Css for the top navigation bar */
+/* ------------------------------ */
+
+
+.header {
+    position: fixed;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 5;
+    height: 50px;
+    width: 100%;
+    top: 0; left: 0;
+}
+
+.header > div {
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header .logo {
+    background-color: transparent;
+    text-align: center;
+}
+
+.header .navbar {
+    text-align: right;
+    background-color: #333;
+    top: 0;
+    right: 0;
+}
